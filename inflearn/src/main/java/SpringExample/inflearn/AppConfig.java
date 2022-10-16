@@ -2,6 +2,7 @@ package SpringExample.inflearn;
 
 import SpringExample.inflearn.discount.DiscountPolicy;
 import SpringExample.inflearn.discount.FixDiscountPolicy;
+import SpringExample.inflearn.discount.RateDiscountPolicy;
 import SpringExample.inflearn.member.MemberRepository;
 import SpringExample.inflearn.member.MemberService;
 import SpringExample.inflearn.member.MemberServiceImpl;
@@ -24,6 +25,6 @@ public class AppConfig {
     }
 
     public DiscountPolicy discountPolicy(){
-        return new FixDiscountPolicy();
+        return new RateDiscountPolicy();
     }
 }
