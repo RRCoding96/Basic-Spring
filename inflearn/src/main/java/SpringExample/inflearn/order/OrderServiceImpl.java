@@ -1,5 +1,6 @@
 package SpringExample.inflearn.order;
 
+import SpringExample.inflearn.annotation.MainDiscountPolicy;
 import SpringExample.inflearn.discount.DiscountPolicy;
 import SpringExample.inflearn.discount.FixDiscountPolicy;
 import SpringExample.inflearn.discount.RateDiscountPolicy;
@@ -20,7 +21,7 @@ public class OrderServiceImpl implements OrderService{
 
     // lombok : @RequiredArgsConstructor가 만들어 줌
     @Autowired
-    public OrderServiceImpl(MemberRepository memberRepository, @Qualifier("mainDiscountPolicy") DiscountPolicy discountPolicy) {
+    public OrderServiceImpl(MemberRepository memberRepository, @MainDiscountPolicy DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }
