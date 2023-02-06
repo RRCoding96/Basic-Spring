@@ -35,7 +35,7 @@ public class SingletonTest {
 
         @PreDestroy
         public void destroy() {
-            System.out.println("SingletonBean.destory");
+            System.out.println("SingletonBean.destroy");
         }
     }
 
